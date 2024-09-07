@@ -1,9 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: 如何上传应用?
-keywords: [WeKube, 无服务器, 如何上传应用]
 title: 如何上传应用?
 description: 了解如何上传应用?
+tags: [WeKube,应用市场,上传应用]
+keywords: [WeKube,应用市场,上传应用]
 ---
 
 用户不仅可以一键部署预置的应用模板，还可以根据自己的需求定制部署方案，并且有机会将自己的应用分享给其他用户，共同推动整个生态系统的繁荣发展。

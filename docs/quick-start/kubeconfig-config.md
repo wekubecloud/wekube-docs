@@ -1,9 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: 配置kubeconfig
-keywords: [WeKube, 无服务器, 一键部署, 配置kubeconfig]
 title: 配置kubeconfig
 description: 了解如何快速配置kubeconfig。
+tags: [WeKube, kubeconfig]
+keywords: [WeKube, kubeconfig]
 ---
 
 

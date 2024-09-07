@@ -1,9 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: 部署Heml chart应用
-keywords: [WeKube, 无服务器, 部署Heml chart应用]
 title: 部署Heml chart应用
-description: 了解如何部署Heml chart应用
+description: 了解如何部署Heml chart
+tags: [WeKube,部署应用,Heml chart]
+keywords: [WeKube,部署应用,Heml chart]
 ---
 
 WeKube支持两种方式部署Helm chart应用。

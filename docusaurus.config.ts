@@ -38,9 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: ({ versionDocsDirPath, docPath, locale }) =>
-              "https://github.com/wekubecloud/wekube-docs/edit/main/" +
-              (locale === "en" ? `${versionDocsDirPath}` : `i18n/${locale}/docusaurus-plugin-content-docs/current/`) +
-              `/${docPath}`,
+              `https://github.com/wekubecloud/wekube-docs/edit/main/docs/${docPath}`,
         },
         blog: {
           showReadingTime: true,
@@ -52,9 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: ({locale, blogDirPath, blogPath, permalink}) =>
-          "https://github.com/wekubecloud/wekube-docs/edit/main/" +
-              (locale === "en" ? `${blogDirPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/`) +
-              `/${blogPath}`,
+          `https://github.com/wekubecloud/wekube-docs/edit/main/blog/${blogPath}`,
           // Useful options to enforce blogging best practices
           // blogTitle: 'Blog title',
           onInlineTags: 'warn',

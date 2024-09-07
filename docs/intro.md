@@ -6,8 +6,8 @@ tags: [Kuernetes, Docker, WeKube,数据库]
 title: "WeKube是什么？"
 description: 本教程介绍了 WeKube 的核心特性、场景与优势。
 keywords: [WeKube, Kuernetes,K8s,Docker,开源,helm chart,Redis,Mongodb,MySQL,MongoDB,Helm Chart]
-# image: ./images/feature.jpg
-date: 2024-09-05T10:00
+image: /img/wekube-index.png
+date: 2024-09-08T10:00
 ---
 
 ## 概述
