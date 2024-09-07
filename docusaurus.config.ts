@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'WeKube - 一个云原生应用引擎',
+  tagline: '立即部署应用程序，无需关注底层集群或服务器！',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://wekube.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'wekube', // Usually your GitHub org/user name.
+  projectName: 'wekube', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -25,8 +25,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -37,20 +37,26 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({ versionDocsDirPath, docPath, locale }) =>
+              "https://github.com/wekubecloud/wekube-docs/edit/main/" +
+              (locale === "en" ? `${versionDocsDirPath}` : `i18n/${locale}/docusaurus-plugin-content-docs/current/`) +
+              `/${docPath}`,
         },
         blog: {
           showReadingTime: true,
+          // blogSidebarTitle: '近期文章',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({locale, blogDirPath, blogPath, permalink}) =>
+          "https://github.com/wekubecloud/wekube-docs/edit/main/" +
+              (locale === "en" ? `${blogDirPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/`) +
+              `/${blogPath}`,
           // Useful options to enforce blogging best practices
+          // blogTitle: 'Blog title',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -65,72 +71,54 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    blog: {
+      sidebar: {
+        groupByYear: true,
+      },
+    },
     navbar: {
-      title: 'My Site',
+      title: 'WeKube',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'WeKube Logo',
+        src: 'img/logo.png',
+        href: 'https://wekube.com',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
+        },
+        {
+          to: 'https://wekube.com/zh-Hans/application/list',
+          label: 'Start Now',
+          position: 'left',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          type: 'localeDropdown',
           position: 'right',
         },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
+          to: 'https://github.com/wekubecloud/wekube-docs',
+          position: 'right',
+          target: '_blank',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
+    metadata: [{ name: 'title', content: 'WeKube' }],
+    // announcementBar: {
+    //   id: 'wekube_tip',
+    //   content: `
+    //   <div class="wk-announcement-bar" style="width: 100%;">
+    //     线上体验！
+    //   </div>
+    //   `,
+    //   isCloseable: false,
+    // },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

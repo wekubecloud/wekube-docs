@@ -1,0 +1,14 @@
+{
+  "item.label.Docs": {
+    "message": "文档",
+    "description": "Docs menu in the navigation bar"
+  },
+  "item.label.Start Now": {
+    "message": "在线使用",
+    "description": "Start Now menu in the navigation bar"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Blog menu in the navigation bar"
+  }
+}

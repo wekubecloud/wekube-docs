@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wekube-docs
+  namespace: wekube-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wekube-docs
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
+  template:
+    metadata:
+      labels:
+        app: wekube-docs
+    spec:
+      containers:
+        - name: wekube-docs
+          imagePullPolicy: IfNotPresent
+          # The previous stable and available version: v0.8.07
+          image: registry-vpc.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.8.07
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 2000m
+              memory: 4Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wekube-docs
+  namespace: wekube-web
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+  selector:
+    app: wekube-docs
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wekube-docs-tls
+  namespace: wekube-web
+spec:
+  secretName: wekube-docs-tls
+  dnsNames:
+    - engine.wekube.com
+  issuerRef:
+    name: wekube-letsencrypt-prod
+    kind: Issuer
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wekube-docs
+  namespace: wekube-web
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/cors-enable: "true"
+    nginx.ingress.kubernetes.io/cors-max-age: "86400"
+spec:
+  ingressClassName: higress
+  tls:
+    - hosts:
+        - engine.wekube.com
+      secretName: wekube-docs-tls
+  rules:
+    - host: engine.wekube.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: wekube-docs
+                port:
+                  name: http
