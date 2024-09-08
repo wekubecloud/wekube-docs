@@ -9,7 +9,7 @@ keywords: [WeKube,部署应用,Heml chart]
 
 WeKube支持两种方式部署Helm chart应用。
 
-## 一、通过Web UI部署
+## 方式一、通过Web UI部署
 
 1. 进入[我的应用](https://wekube.com/zh-Hans/application/list)。
 
@@ -33,7 +33,7 @@ WeKube支持两种方式部署Helm chart应用。
 
    ![提交chart应用](./img/deploy-hlem-chart-app-submit.png)
 
-## 二、使用helm部署
+## 方式二、使用helm部署
 
 1. 创建并配置values.yaml。
 
@@ -44,3 +44,13 @@ WeKube支持两种方式部署Helm chart应用。
    ```
 
    helm instanll命令使用详情 https://helm.sh/docs/helm/helm_install/。
+
+## 查看应用
+
+方式一：进入[我的应用](https://wekube.com/zh-Hans/application/list)查看。
+
+方式二：使用helm命令查看。
+
+```shell
+helm list
+```
