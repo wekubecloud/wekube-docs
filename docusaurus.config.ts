@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'WeKube - 一个云原生应用引擎',
-  tagline: '立即部署应用程序，无需关注底层集群或服务器！',
+  title: 'WeKube - 一个应用托管平台',
+  tagline: '快捷部署应用，无需服务器！',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
@@ -105,7 +105,10 @@ const config: Config = {
         },
       ],
     },
-    metadata: [{ name: 'title', content: 'WeKube' }],
+    metadata: [
+      { name: 'description', content:"快捷部署应用，无需服务器！" },
+      { name: 'keywords', content: '应用托管,Docker,Kubernetes,k8s,Redis,MySQL,PostgreSQL,MongoDB,数据库,免运维,Serverless,云原生,容器应用,应用商城,一键部署' }
+    ],
     // announcementBar: {
     //   id: 'wekube_tip',
     //   content: `
