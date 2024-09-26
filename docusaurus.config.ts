@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'WeKube - 一个应用托管平台',
+  title: 'WeKube - 文档中心',
   tagline: '快捷部署应用，无需服务器！',
   favicon: 'img/logo.png',
 
@@ -92,6 +92,7 @@ const config: Config = {
           position: 'left',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/friends', label: 'Friends', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',
