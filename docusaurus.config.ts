@@ -91,7 +91,7 @@ const config: Config = {
           label: 'Start Now',
           position: 'left',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/friends', label: 'Friends', position: 'left'},
         {
           type: 'localeDropdown',

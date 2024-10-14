@@ -116,7 +116,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
                pathType: ImplementationSpecific
    ```
 
-2. 实现【自定义域名+添加SSL证书+HTTP 重定向为HTTPS】的配置如下：
+2. 实现【**自定义域名**+添加SSL证书+HTTP 重定向为HTTPS】的配置如下：
 
    ```yaml
    apiVersion: networking.k8s.io/v1
@@ -140,5 +140,36 @@ keywords: [WeKube, Ingress, 注解, annotations]
                pathType: ImplementationSpecific
    ```
 
-   - 使用的自定义域名，需要存在一个CNAME类型的DNS记录解析到cname.a.wekube.com，且已经生效。
+   :::tip[提示]
+   
+   需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.a.wekube.com。
+
+   :::
+
+   要检查一个CNAME类型的DNS记录是否已经生效？您可以按照以下方法：
+
+    - **使用命令行工具查询**：
+   
+      在Windows中可以使用`nslookup`命令。
+
+      ```shell
+      nslookup yourdomain.com
+      ```
+   
+      在Unix/Linux或macOS系统中可以使用`dig`命令。
+
+      ```shell
+      dig yourdomain.com CNAME
+      ```
+
+      上述命令会显示与您域名相关的所有DNS记录。
+
+    - **使用在线DNS查询工具**：
+
+      [WhatIsMyIP.com](https://www.whatismyip.com/dns-lookup/)
+   
+      选择类型为CNAME，输入您的自定义域名`https://yourdomain.com`，然后提交。
+   
+      - 如果已经生效就会直接显示；
+      - 如果提示`no records found`就是还没有生效。
 

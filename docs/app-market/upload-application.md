@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-sidebar_label: 如何上传应用?
-title: 如何上传应用?
-description: 了解如何上传应用?
+sidebar_position: 2
+sidebar_label: 如何上传应用
+title: 如何上传应用
+description: 了解如何上传应用
 tags: [WeKube,应用市场,上传应用]
 keywords: [WeKube,应用市场,上传应用]
 ---
