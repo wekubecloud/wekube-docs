@@ -25,12 +25,16 @@ keywords: [WeKube, Ingress, 注解, annotations]
 
 - 取值类型：bool，默认为false。
 
-- 功能：是否需要系统为这个Ingress 分配域名。
+- 功能：表示是否需要系统为这个Ingress 分配域名。
+
+  - 此注解并不会自动申请SSL证书，如果需要添加SSL证书需要使用ingress.wekube.com/with-ssl注解。
+  - 分配域名的生成规则：
+    - 单个Rule域名生成规则：`<Ingressm名称>.<用户ID>.<集群ID>.wekube.com`。例如demo.uid.hk.wekukbe.com
+    - 多个Rul域名生成规则e：`<Ingressm名称>[-Rule序号].<用户ID>.<集群ID>.wekube.com`。例如demo-2.uid.hk.wekukbe.com
 
 - 使用示例：
 
   - 需要保持host为空。
-  - 它并不会添加SSL，如果需要添加SSL还需要使用ingress.wekube.com/with-ssl注解。
 
   ```yaml
   apiVersion: networking.k8s.io/v1
@@ -41,7 +45,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
       ingress.wekube.com/with-host: 'true'
   spec:
     rules:
-      - host: 
+      - host: ""
         http:
           paths:
             - backend:
@@ -53,21 +57,16 @@ keywords: [WeKube, Ingress, 注解, annotations]
               pathType: ImplementationSpecific
   ```
 
-- 生成的域名是可以预测的：
-
-  - 单个Rule域名生成规则：`<Ingressm名称>.<用户ID>-<集群ID>.wekube.com`。例如demo.uid-a.wekukbe.com
-  - 多个Rul域名生成规则e：`<Ingressm名称>[-Rule序号].<用户ID>-<集群ID>.wekube.com`。例如demo-2.uid-a.wekukbe.com
-
-
-
 ### ingress.wekube.com/with-ssl
 
 - 取值类型：bool，默认为false。
 
-- 功能：是否需要系统为这个Ingress 上的域名办法SSL证书。
+- 功能：表示是否需要为这个Ingress 上的域名申请并添加SSL证书。
 
 - 使用示例：
 
+  > 如果使用的是自定义域名，需要提前给要使用的域名添加一个DNS记录，解析类型为CNAME，值为cname.hk.wekube.com。
+  
   ```yaml
   apiVersion: networking.k8s.io/v1
   kind: Ingress
@@ -142,7 +141,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
 
    :::tip[提示]
    
-   需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.a.wekube.com。
+   需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.hk.wekube.com。
 
    :::
 
@@ -161,7 +160,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
       ```shell
       dig yourdomain.com CNAME
       ```
-
+   
       上述命令会显示与您域名相关的所有DNS记录。
 
     - **使用在线DNS查询工具**：

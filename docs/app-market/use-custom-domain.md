@@ -11,7 +11,8 @@ keywords: [WeKube,应用市场,自定义域名]
 
 :::tip[提示]
 
-仅支持已经ICP备案成功的域名。
+部署区域选择在中国内地时，使用的域名需要先进行ICP备案；
+部署区域选择在香港或国外内地时，无需备案。
 
 :::
 
@@ -19,7 +20,7 @@ keywords: [WeKube,应用市场,自定义域名]
 
 :::tip[提示]
 
-需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.a.wekube.com。
+需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.hk.wekube.com。
 
 :::
 
@@ -52,11 +53,13 @@ keywords: [WeKube,应用市场,自定义域名]
 
 ## 使用自定义域名
 
-1. 首先进入[【Ingress管理】](https://wekube.com/zh-Hans/kubernetes/ingresses)页面。
+1. 首先进入应用详情页面。
 
-2. 找到目标应用的Ingress对象，然后点击【详情】。
+2. 找到需要修改的Ingress对象，然后点击【详情】。
 
    ![image-20241014233516649](./img/ingresses-list.png)
+
+   
 
 3. 点击【编辑】图标按钮。
 
@@ -64,9 +67,9 @@ keywords: [WeKube,应用市场,自定义域名]
 
 4. 配置自定义域名
 
-   - 仅删除 ingress.wekube.com/with-host注解，保留ingress.wekube.com/with-ssl注解。
+   - 删除 ingress.wekube.com/with-host注解，保留ingress.wekube.com/with-ssl注解。
    - 修改rule中的host为您的自定义域名。
-   - 删除tls字段或者保持不变，WeKube会自动修改为您的域名并添加SSL证书。
+   - 删除tls字段，WeKube会自动为您的域名添加SSL证书。详见[《使用Ingress注解》](/docs/quick-start/ingress-annotations)。
 
    ```yaml
    apiVersion: networking.k8s.io/v1
@@ -74,7 +77,7 @@ keywords: [WeKube,应用市场,自定义域名]
    metadata:
      annotations:
        ingress.wekube.com/with-ssl: 'true'
-     namespace: u-be
+       nginx.ingress.kubernetes.io/ssl-redirect: 'true'
    spec:
      rules:
        - host: demo.example.com
@@ -90,3 +93,6 @@ keywords: [WeKube,应用市场,自定义域名]
    ```
 
 5. 点击【确认】提交，配置完成。
+
+   > 配置提交后，系统需要一段时间来完成SSL证书申请。
+
