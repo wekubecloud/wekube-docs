@@ -42,6 +42,13 @@ function FriendsLinkGrid() {
   return (
     <ul className={`clean-list ${styles.cardList}`}>
       <OneSite
+        title="WeLiu"
+        subTitle="这里记录一些值得分享的内容"
+        href="https://weliu.com/"
+        avatar="https://weliu.com/upload/unnamed.jpg"
+      />
+
+      <OneSite
         title="我不是咕咕鸽"
         subTitle="learn or earn"
         href="https://blog.laoda.de"
@@ -49,38 +56,10 @@ function FriendsLinkGrid() {
       />
 
       <OneSite
-        title="晨鹤部落格"
-        subTitle="Believe in OPENNESS"
-        href="https://chenhe.me"
-        avatar="https://img.chenhe.cc/avatar/chenhe"
-      />
-
-      <OneSite
         title="FunnyWii's Zone"
         subTitle="算法攻城狮/皮具爱好者/摩托骑不倒/吉他能出声"
         href="https://funnywii.com"
         avatar="https://funnywii.com/upload/icon4.jpg"
-      />
-
-      <OneSite
-        title="P3TERX ZONE"
-        subTitle="一个萌新的博客"
-        href="https://p3terx.com"
-        avatar="https://s.gravatar.com/avatar/c42fdfa8aca47ec27a7c35dfa7d1dc51?s=200"
-      />
-
-      <OneSite
-        title="FANTASY博客"
-        subTitle="记录学习、生活的小站"
-        href="https://blog.tigerxly.com"
-        avatar="https://img.sunxiaochuan258.com/avatar/tigerxly/avatar-tigerxly-256.jpg"
-      />
-
-      <OneSite
-        title="Chr_小屋"
-        subTitle="生命不息折腾不止"
-        href="https://blog.chrxw.com"
-        avatar="https://blog.chrxw.com/usr/customize/logo.png"
       />
     </ul>
   );
