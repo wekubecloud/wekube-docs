@@ -40,7 +40,7 @@ keywords: [WeKube,应用市场,上传应用]
 
    ![完成表单后提交](./img/application-market-submit.png)
 
-   - [如何制作表单Schama](./make-form-schama)
+   - [如何制作表单Schama](/docs/app-market/make-form-schama)
 
 
 
