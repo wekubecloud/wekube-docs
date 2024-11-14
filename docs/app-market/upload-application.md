@@ -27,7 +27,6 @@ keywords: [WeKube,应用市场,上传应用]
 - **图标**：准备好应用的图标。
 
 
-
 ## 提交应用
 
 1. 首先进入[【应用市场】](https://wekube.com/zh-Hans/application/market)。
@@ -36,13 +35,27 @@ keywords: [WeKube,应用市场,上传应用]
 
    ![应用市场页面](./img/application-market-upload-tips.png)
 
-3. 选择项目后，完成表单后提交。
+3. 选择项目。
+
+   > 如果项目不存在，请点击【新建一个项目】，创建要给项目。
 
    ![完成表单后提交](./img/application-market-submit.png)
 
-   - [如何制作表单Schama](/docs/app-market/make-form-schama)
+4. 选择包类型为【Chart】。
 
+5. 选择Chart包文件夹。
 
+   :::tip[提示]
+
+   选择的Chart包名称必须与项目名称一致，但是在比较时会忽略大小写、空格、-符号
+
+   :::
+
+6. 编辑表单Schama。[如何制作表单Schama](/docs/app-market/make-form-schama)。
+
+7. 选择README.md文件。
+
+8. 点击【确定】，完成上传。
 
 ## 注意事项
 
