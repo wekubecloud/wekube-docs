@@ -12,6 +12,7 @@ keywords: [WeKube,应用市场,自定义域名]
 :::tip[提示]
 
 部署区域选择在中国内地时，使用的域名需要先进行ICP备案；
+
 部署区域选择在香港或国外内地时，无需备案。
 
 :::
@@ -67,9 +68,9 @@ keywords: [WeKube,应用市场,自定义域名]
 
 4. 配置自定义域名
 
-   - 删除 ingress.wekube.com/with-host注解，保留ingress.wekube.com/with-ssl注解。
+   - 删除 ingress.wekube.com/with-host注解，可保留ingress.wekube.com/with-ssl注解。详见[《使用Ingress注解》](/docs/quick-start/ingress-annotations)。
    - 修改rule中的host为您的自定义域名。
-   - 删除tls字段，WeKube会自动为您的域名添加SSL证书。详见[《使用Ingress注解》](/docs/quick-start/ingress-annotations)。
+   - 删除tls字段，WeKube会自动为您添加。
 
    ```yaml
    apiVersion: networking.k8s.io/v1
@@ -96,3 +97,10 @@ keywords: [WeKube,应用市场,自定义域名]
 
    > 配置提交后，系统需要一段时间来完成SSL证书申请。
 
+## 注意事项
+
+- 【变更】应用后，Ingress会被重置，需要重新配置。
+
+   :::tip[提示]
+   如果您有更好的方法和建议，请[联系我们](https://wekube.com/zh-Hans/contactus)。
+   :::

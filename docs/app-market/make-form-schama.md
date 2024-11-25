@@ -26,8 +26,10 @@ keywords: [WeKube,JSON Schama,上传应用]
 - `description`对应表单项的提示消息。
 - `default`对应表单项的默认值。
 - `x-config-field`对应values.yaml中的一个配置项路径。
-- format为cpu-quantity、memory-quantity、storage-quantity的string对象，分别可用于配置CPU、内存、卷容量。
-- `min-quantity`仅支持format为cpu-quantity、memory-quantity、storage-quantity的string对象，用于配置最小资源用量。
+- `format`取值为cpu-quantity、memory-quantity、storage-quantity时，分别可用于配置CPU、内存、卷容量。
+
+  `min-quantity`仅支持format为cpu-quantity、memory-quantity、storage-quantity的string对象，用于配置最小资源用量。
+- 可以使用`minLength`和`maxLength`关键字来限制字符串的长度。对于这两个关键字，该值必须是非负数。
 
 ```json
 {
