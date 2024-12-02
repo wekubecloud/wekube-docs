@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'WeKube - 文档中心',
-  tagline: '快捷部署应用，无需服务器！',
+  tagline: '快捷部署应用，无需服务器，免备案！',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
@@ -107,7 +107,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'description', content:"快捷部署应用，无需服务器！" },
+      { name: 'description', content:"快捷部署应用，无需服务器，免备案！" },
       { name: 'keywords', content: '应用托管,Docker,Kubernetes,k8s,Redis,MySQL,PostgreSQL,MongoDB,数据库,免运维,Serverless,云原生,容器应用,应用商城,一键部署' }
     ],
     // announcementBar: {
