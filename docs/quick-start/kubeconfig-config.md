@@ -13,7 +13,7 @@ keywords: [WeKube, kubeconfig]
 
 ## 下载kubeconfig文件
 
-首先进入[kubeconfig页面](https://wekube.com/zh-Hans/kubernetes/kubeconfig)。
+首先进入[【kubeconfig页面】](https://wekube.com/zh-Hans/kubernetes/kubeconfig)。
 
 ![kubeconfig页面](./img/kubeconfig-page.png)
 

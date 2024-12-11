@@ -16,7 +16,7 @@ keywords: [WeKube,JSON Schama,上传应用]
 
 ## 开始之前
 
-在开始上传之前，你需要对 **JSON Schema** 语法有一定的了解 https://json-schema.org/。
+在开始上传之前，你需要对[【**JSON Schema**】](https://json-schema.org/)语法有一定的了解。
 
 
 
@@ -79,12 +79,12 @@ keywords: [WeKube,JSON Schama,上传应用]
 
 ## 格式审查
 
-打开表单输入调试窗口：控制台=>使用市场=>发布应用=>选择包类型为【Chart】=> 表单Schama，在线编辑。
+打开表单输入调试窗口：控制台=>应用市场=>发布应用=>选择包类型为【Chart】=> 表单Schama，在线编辑。
 
 ![format-inspect](./img/format-inspect.png)
 
 ## 效果预览
 
-打开表单输入调试窗口：控制台=>使用市场=>发布应用=>选择包类型为【Chart】=> 表单Schama，在线编辑。
+打开表单输入调试窗口：控制台=>应用市场=>发布应用=>选择包类型为【Chart】=> 表单Schama，在线编辑。
 
 ![form-preview](./img/form-preview.png)

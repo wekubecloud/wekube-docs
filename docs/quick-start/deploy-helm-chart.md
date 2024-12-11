@@ -11,7 +11,7 @@ WeKube支持两种方式部署Helm chart应用。
 
 ## 方式一、通过Web UI部署
 
-1. 进入[我的应用](https://wekube.com/zh-Hans/application/list)。
+1. 进入[【我的应用】](https://wekube.com/zh-Hans/application/list)。
 
 2. 点击【部署】按钮。
 

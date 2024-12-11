@@ -9,7 +9,7 @@ keywords: [WeKube, 文件管理]
 
 WeKube 提供对文件的可视化管理功能，用户可以快速上传、下载、删除文件，而无需进入容器
 
-1. 登录 WeKube 控制台，进入【我的应用】页面。
+1. 登录 WeKube 控制台，进入[【我的应用】](https://wekube.com/zh-Hans/application/list)页面。
 
 2. 选择需要管理的应用，进入应用详情页面。
 

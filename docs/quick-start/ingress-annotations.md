@@ -8,7 +8,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
 ---
 
 ## Higress 注解
-支持使用Higress注解，详情：https://higress.cn/docs/latest/user/annotation/。
+支持使用Higress注解，详情：[【Ingress Annotation 配置说明】](https://higress.cn/docs/latest/user/annotation/)。
 
 例如，添加nginx.ingress.kubernetes.io/ssl-redirect注解，将HTTP 重定向为HTTPS：
 
@@ -100,10 +100,11 @@ keywords: [WeKube, Ingress, 注解, annotations]
      annotations:
        ingress.wekube.com/with-host: 'true'
        ingress.wekube.com/with-ssl: 'true'
+       nginx.ingress.kubernetes.io/backend-protocol: HTTP
        nginx.ingress.kubernetes.io/ssl-redirect: 'true'
    spec:
      rules:
-       - host: 
+       - host: ""
          http:
            paths:
              - backend:
@@ -124,6 +125,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
      name: demo
      annotations:
        ingress.wekube.com/with-ssl: 'true'
+       nginx.ingress.kubernetes.io/backend-protocol: HTTP
        nginx.ingress.kubernetes.io/ssl-redirect: 'true'
    spec:
      rules:
