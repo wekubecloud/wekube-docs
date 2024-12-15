@@ -21,19 +21,19 @@ spec:
       containers:
         - name: wekube-docs
           imagePullPolicy: Always
-          # The previous stable and available version: v0.9.21
-          image: registry-vpc.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.9.21
+          # The previous stable and available version: v0.12.01
+          image: registry-vpc.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.01
           ports:
             - containerPort: 80
               name: http
               protocol: TCP
           resources:
             requests:
-              cpu: 100m
+              cpu: 50m
               memory: 256Mi
             limits:
-              cpu: 2000m
-              memory: 4Gi
+              cpu: 200m
+              memory: 512Mi
 
 ---
 apiVersion: v1

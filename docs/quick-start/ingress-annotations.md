@@ -29,8 +29,8 @@ keywords: [WeKube, Ingress, 注解, annotations]
 
   - 此注解并不会自动申请SSL证书，如果需要添加SSL证书需要使用ingress.wekube.com/with-ssl注解。
   - 分配域名的生成规则：
-    - 单个Rule域名生成规则：`<Ingress名称>.<用户ID>.<集群ID>.wekube.com`。例如demo.uid.hk.wekukbe.com
-    - 多个Rul域名生成规则e：`<Ingress名称>[-Rule序号].<用户ID>.<集群ID>.wekube.com`。例如demo-2.uid.hk.wekukbe.com
+    - 单个Rule域名生成规则：`<Ingress名称>.<用户ID>.<集群ID>.wekube.com`。例如demo.uid.hy.wekukbe.com
+    - 多个Rul域名生成规则e：`<Ingress名称>[-Rule序号].<用户ID>.<集群ID>.wekube.com`。例如demo-2.uid.hy.wekukbe.com
 
 - 使用示例：
 
@@ -65,7 +65,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
 
 - 使用示例：
 
-  > 如果使用的是自定义域名，需要提前给要使用的域名添加一个DNS记录，解析类型为CNAME，值为cname.hk.wekube.com。
+  > 如果使用的是自定义域名，需要提前给要使用的域名添加一个DNS记录，解析类型为CNAME，值为cname.hy.wekube.com。
   
   ```yaml
   apiVersion: networking.k8s.io/v1
@@ -143,7 +143,7 @@ keywords: [WeKube, Ingress, 注解, annotations]
 
    :::tip[提示]
    
-   需要提前给要使用的自定义域名添加一个CNAME类型的DNS记录，并解析到cname.hk.wekube.com。
+   需要提前给要使用的自定义域名添加一个CNAME类型的DNS记录，并解析到cname.hy.wekube.com。
 
    :::
 

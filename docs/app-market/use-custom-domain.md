@@ -21,7 +21,7 @@ keywords: [WeKube,应用市场,自定义域名]
 
 :::tip[提示]
 
-需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.hk.wekube.com。
+需要提前给要使用的域名添加一个CNAME类型的DNS记录，并解析到cname.hy.wekube.com。
 
 :::
 
