@@ -15,18 +15,9 @@ export default function friends() {
             <a
               href="https://wekube.com/zh-Hans/contactus"
               target="_blank"
-              rel="noopener noreferrer"
             >
               联系我们
             </a>
-            {/* <a
-              href="https://wekube.com/zh-Hans/contactus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button button--primary"
-            >
-              🙏 请添加你的网站
-            </a> */}
           </p>
         </section>
 
@@ -41,6 +32,13 @@ export default function friends() {
 function FriendsLinkGrid() {
   return (
     <ul className={`clean-list ${styles.cardList}`}>
+      <OneSite
+        title="运维开发绿皮书"
+        subTitle="放置运维开发笔记、搜集、摘录、实践，保持好奇心，看文需谨慎，后果很严重！"
+        href="https://www.geekery.cn/"
+        avatar="https://www.geekery.cn/logo.svg"
+      />
+
       <OneSite
         title="WeLiu"
         subTitle="这里记录一些值得分享的内容"
