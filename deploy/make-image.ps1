@@ -1,5 +1,5 @@
-docker build -t "registry.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.01" -f Dockerfile .
-docker push "registry.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.01"
+docker build -t "registry.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.02" -f Dockerfile .
+docker push "registry.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.02"
 
 # kubectl apply -f deploy/wekube-docs.yaml
 kubectl -n wekube-web get pod
