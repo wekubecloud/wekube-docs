@@ -1,10 +1,17 @@
 .cardList {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fill,minmax(360px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 默认设置手机宽度 */
 }
 
- .page-links-item {
+/* 在更大的屏幕（如桌面）上设置最小列宽为 360px */
+@media (min-width: 768px) {
+  .cardList {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* 电脑屏幕 */
+  }
+}
+
+.page-links-item {
   position: relative;
   display: flex;
   flex-direction: row;
