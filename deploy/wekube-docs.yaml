@@ -21,8 +21,8 @@ spec:
       containers:
         - name: wekube-docs
           imagePullPolicy: Always
-          # The previous stable and available version: v0.12.03
-          image: registry-vpc.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.03
+          # The previous stable and available version: v0.12.05
+          image: registry-vpc.cn-heyuan.aliyuncs.com/wekube/wekube-docs:v0.12.05
           ports:
             - containerPort: 80
               name: http

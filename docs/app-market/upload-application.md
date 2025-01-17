@@ -1,19 +1,19 @@
 ---
 sidebar_position: 2
-sidebar_label: 如何上传应用
-title: 如何上传应用
-description: 了解如何上传应用
-tags: [WeKube,应用市场,上传应用]
-keywords: [WeKube,应用市场,上传应用]
+sidebar_label: 如何上传应用模板
+title: 如何上传应用模板
+description: 了解如何上传应用模板
+tags: [WeKube,应用市场,上传应用，上传应用模板]
+keywords: [WeKube,应用市场,上传应用，上传应用模板]
 ---
 
 用户不仅可以一键部署预置的应用模板，还可以根据自己的需求定制部署方案，并可以将应用分享给到应用市场，开放给其它用户使用，共同推动整个生态系统的繁荣发展。
 
 :::tip[提示]
 
-- 目前仅支持Helm chart格式的应用安装包。
+- 目前仅支持Helm chart格式的应用安装包；下载完整[示例模板](https://wekube-cloud.oss-cn-heyuan.aliyuncs.com/SharePicture/app-template-demo.zip)。
 
-- 上传应用即可获得消费返利，详见[开发返利](https://wekube.com/zh-Hans/joinus/publish)。
+- 上传应用模板即可获得消费返利和现金奖励；详见[开发返利](https://wekube.com/zh-Hans/joinus/publish)。
 
 :::
 
@@ -24,7 +24,6 @@ keywords: [WeKube,应用市场,上传应用]
 - **测试**：确保你的应用程序进行了充分的测试，并且没有明显的bug。
 - **说明文档**：准备应用的截图以及清晰的应用描述，以便用户了解应用的功能和特点。
 - **图标和备注**：准备好应用的图标，如果需要，还可以添加备注说明。
-
 
 ## 提交应用
 
